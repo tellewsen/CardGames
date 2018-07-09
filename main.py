@@ -10,7 +10,7 @@ deck = [2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4,
         14, 14, 14, 14]
 
 # Variables and empty lists
-n = 100  # Number of simulations
+n = 1000  # Number of simulations
 seeds = np.empty((n, 52), dtype=int)
 won_games = np.empty(n)
 counts = np.empty(n)
@@ -29,7 +29,7 @@ for i in range(n):
 with open('seeds.txt', 'ab') as f:
     np.savetxt(f, seeds, fmt='%i')  # , header='Seed')
 with open('counts.txt', 'ab') as f:
-    np.savetxt(f, counts, fmt='%i#')  # , header='Counts')
+    np.savetxt(f, counts, fmt='%i')  # , header='Counts')
 with open('wins.txt', 'ab') as f:
     np.savetxt(f, won_games, fmt='%i')  # , header='Win/Lose')
 
