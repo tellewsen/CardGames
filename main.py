@@ -1,6 +1,5 @@
 import random
 import numpy as np
-import pickle
 from war import WarGame
 import time
 # Set up a deck and shuffle it
@@ -23,14 +22,16 @@ for i in range(n):
     current_game = WarGame(deck)  # Initialize game
     seeds[i] = deck.copy()  # Save a copy of the deck.
     won_games[i] = current_game.winnable  # Save winnable or not
-    counts[i] = current_game.counter
+    counts[i] = current_game.counter  # Save count
 
 # Write to file
 # t3 = time.time()
-
-np.savetxt('seeds.txt', seeds, fmt='%i', header='Seed')
-np.savetxt('counts.txt', counts, fmt='%i', header='Counts')
-np.savetxt('wins.txt', won_games, fmt='%i', header='Win/Lose')
+with open('seeds.txt', 'ab') as f:
+    np.savetxt(f, seeds, fmt='%i')  # , header='Seed')
+with open('counts.txt', 'ab') as f:
+    np.savetxt(f, counts, fmt='%i#')  # , header='Counts')
+with open('wins.txt', 'ab') as f:
+    np.savetxt(f, won_games, fmt='%i')  # , header='Win/Lose')
 
 # t4 = time.time()
 # print('Took ' + '%.2f' % (t4-t3) + ' seconds to save to file')
