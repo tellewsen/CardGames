@@ -10,7 +10,7 @@ deck = [2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4,
         14, 14, 14, 14]
 
 # Variables and empty lists
-n = 1000  # Number of simulations
+n = 10000  # Number of simulations
 seeds = np.empty((n, 52), dtype=int)
 won_games = np.empty(n)
 counts = np.empty(n)

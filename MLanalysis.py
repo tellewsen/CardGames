@@ -46,5 +46,4 @@ classifiers = [
 
 for i in range(len(classifiers)):
     classifiers[i].fit(seeds_train, wins_train)
-    print('%s :' % names[i] + str(classifiers[i].score(seeds_test, wins_test)))
-
+    print('%s :' % names[i] + '%.2f' % classifiers[i].score(seeds_test, wins_test))
