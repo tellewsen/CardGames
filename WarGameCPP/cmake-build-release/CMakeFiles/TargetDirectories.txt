@@ -1,0 +1,3 @@
+D:/Projects/WarGameCPP/cmake-build-release/CMakeFiles/WarGameCPP.dir
+D:/Projects/WarGameCPP/cmake-build-release/CMakeFiles/edit_cache.dir
+D:/Projects/WarGameCPP/cmake-build-release/CMakeFiles/rebuild_cache.dir
